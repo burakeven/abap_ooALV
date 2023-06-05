@@ -222,34 +222,34 @@ CLASS cl_event_receiver IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD handle_toolbar.
-      data: ls_toolbar type stb_button.
-
-      clear: ls_toolbar.
-      ls_toolbar-function = '&DEL'.
-      ls_toolbar-text = 'Silme'.
-      ls_toolbar-icon = '@11@'.
-      ls_toolbar-quickinfo = 'Silme islemi'. "mouse ile ustune gelindiginde yazilmasi istenen tanim
-      ls_toolbar-disabled = abap_false.
-
-      append ls_toolbar to e_object->mt_toolbar.
-
-
-      clear: ls_toolbar.
-      ls_toolbar-function = '&DIS'.
-      ls_toolbar-text = 'Goruntule'.
-      ls_toolbar-icon = '@10@'.
-      ls_toolbar-quickinfo = 'Goruntuleme Islemi'. "mouse ile ustune gelindiginde yazilmasi istenen tanim
-      ls_toolbar-disabled = abap_false.
-
-      append ls_toolbar to e_object->mt_toolbar.
+*      data: ls_toolbar type stb_button.
+*
+*      clear: ls_toolbar.
+*      ls_toolbar-function = '&DEL'.
+*      ls_toolbar-text = 'Silme'.
+*      ls_toolbar-icon = '@11@'.
+*      ls_toolbar-quickinfo = 'Silme islemi'. "mouse ile ustune gelindiginde yazilmasi istenen tanim
+*      ls_toolbar-disabled = abap_false.
+*
+*      append ls_toolbar to e_object->mt_toolbar.
+*
+*
+*      clear: ls_toolbar.
+*      ls_toolbar-function = '&DIS'.
+*      ls_toolbar-text = 'Goruntule'.
+*      ls_toolbar-icon = '@10@'.
+*      ls_toolbar-quickinfo = 'Goruntuleme Islemi'. "mouse ile ustune gelindiginde yazilmasi istenen tanim
+*      ls_toolbar-disabled = abap_false.
+*
+*      append ls_toolbar to e_object->mt_toolbar.
   ENDMETHOD.
   METHOD handle_user_command.
-CASE e_ucomm.
-  WHEN '&DEL'.
-    MESSAGE 'Silme islemi' type 'I'.
-  WHEN '&DIS'.
-    MESSAGE 'Display islemi' type 'I'.
-  WHEN OTHERS.
-ENDCASE.
+*CASE e_ucomm.
+*  WHEN '&DEL'.
+*    MESSAGE 'Silme islemi' type 'I'.
+*  WHEN '&DIS'.
+*    MESSAGE 'Display islemi' type 'I'.
+*  WHEN OTHERS.
+*ENDCASE.
   ENDMETHOD.
 ENDCLASS.

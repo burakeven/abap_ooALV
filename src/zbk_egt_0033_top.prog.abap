@@ -25,6 +25,16 @@ DATA: gt_scarr   TYPE TABLE OF gty_scarr,
       "gs_fcatt2  TYPE lvc_s_fcat,
       gs_layout  TYPE lvc_s_layo.
 
+data: gt_excluding TYPE UI_FUNCTIONS,
+      gv_excluding type UI_FUNC,
+      gt_sort TYPE LVC_T_SORT,
+      gs_sort type LVC_S_SORT,
+      gt_filter TYPE LVC_T_FILT,
+      gs_filter type LVC_S_FILT.
+
+data: gs_variant TYPE DISVARIANT,
+      gs_variant_temp type disvariant.
+
 DATA: go_spli TYPE REF TO cl_gui_splitter_container,
       go_sub1 TYPE REF TO cl_gui_container,
       go_sub2 TYPE REF TO cl_gui_container.
@@ -37,3 +47,5 @@ FIELD-SYMBOLS: "<gfs_fcat>  TYPe,
 CLASS cl_event_receiver DEFINITION DEFERRED.
 
 DATA: go_event_receiver TYPE REF TO cl_event_receiver.
+
+PARAMETERS: p_vari type disvariant-variant.
